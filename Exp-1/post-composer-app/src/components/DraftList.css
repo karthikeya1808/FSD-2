@@ -1,0 +1,23 @@
+.draft-list__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.draft-list__empty {
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius);
+  padding: 28px 18px;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+
+.draft-list__empty p {
+  margin: 0;
+}
+
+.draft-list__empty-sub {
+  font-size: 11.5px;
+  margin-top: 4px !important;
+}

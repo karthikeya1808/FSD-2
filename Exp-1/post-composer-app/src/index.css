@@ -1,0 +1,93 @@
+:root {
+  /* ---- Color tokens: "Wire Desk" newsroom/telegraph palette ---- */
+  --paper: #e7e4d6;
+  --paper-raised: #f1efe4;
+  --ink: #22302a;
+  --ink-soft: #4b5b53;
+  --ink-faint: #7c8a80;
+  --rule: #c7c1ac;
+  --rule-strong: #a89f83;
+  --brass: #9c7a2e;
+  --brass-deep: #7c5f20;
+  --brass-pale: #e8dcb8;
+  --alert: #b3402a;
+  --alert-pale: #f3ddd4;
+  --success: #3e6b4f;
+  --success-pale: #dde8e0;
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --radius: 3px;
+  --shadow-slip: 0 1px 0 var(--rule), 0 8px 16px -12px rgba(34, 48, 42, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image: radial-gradient(circle at 1px 1px, rgba(34, 48, 42, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+textarea,
+select,
+input {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--brass-pale);
+  color: var(--ink);
+}
+
+/* Visible keyboard focus everywhere */
+button:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brass-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

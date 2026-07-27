@@ -1,0 +1,52 @@
+.char-counter {
+  min-width: 128px;
+}
+
+.char-counter__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.char-counter__platform {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+.char-counter__digits {
+  color: var(--ink-soft);
+}
+
+.char-counter--warn .char-counter__digits {
+  color: var(--brass-deep);
+}
+
+.char-counter--over .char-counter__digits {
+  color: var(--alert);
+  font-weight: 600;
+}
+
+.char-counter__track {
+  height: 3px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.char-counter__fill {
+  height: 100%;
+  background: var(--brass);
+  transition: width 0.12s linear, background 0.2s ease;
+}
+
+.char-counter--warn .char-counter__fill {
+  background: var(--brass-deep);
+}
+
+.char-counter--over .char-counter__fill {
+  background: var(--alert);
+}
